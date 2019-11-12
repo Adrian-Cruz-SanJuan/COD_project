@@ -32,21 +32,22 @@
     <div class="container">
       <div class="row">
         <div class="mx-auto col-lg-6 col-10" style="	background-image: linear-gradient(to bottom, rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
-          <h1>Crear cuenta nueva</h1>
-          <form class="text-left">
+          <h1 contenteditable="true">Crear cuenta nueva</h1>
+          <form class="text-left" action="hoja.php" method="POST">
             <div class="form-group">
-              <div class="form-group"><input type="text" class="form-control" id="form16" placeholder="Nombre"></div>
+              <div class="form-group"><input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre">
+                <div class="form-group"><label></label><input type="text" class="form-control" id="form16" placeholder="Apellidos" name="Apellidos"></div>
+              </div>
             </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form17" placeholder="Correo"> </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="V
-erificar correo"> </div>
+            <div class="form-group"> <input type="email" class="form-control" id="form17" placeholder="Correo" name="Correo"> </div>
+            <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="Verificar correo"> </div>
             <div class="form-row">
-              <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19"> </div>
-              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20"> </div>
+              <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19" name="Password"> </div>
+              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" name="Password"> </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6"> <label for="form19">Fecha de nacimiento</label><br><br>
-                <select name="cars">
+                <select name="Dia">
                   <option value="Dia">Dia</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -79,7 +80,8 @@ erificar correo"> </div>
                   <option value="29">29</option>
                   <option value="30">30</option>
                   <option value="31">31</option>
-                </select>   <select name="cars">
+                </select>   
+                <select name="Mes">
                   <option value="Mes">Mes</option>
                   <option value="Enero">Enero</option>
                   <option value="Febrero">Febrero</option>
@@ -93,7 +95,7 @@ erificar correo"> </div>
                   <option value="Octubre">Octubre</option>
                   <option value="Noviembre">Noviembre</option>
                   <option value="Diciembre">Diciembre</option>
-                </select>  <select name="cars">
+                </select>  <select name="Year">
                   <option value="Año">Año</option>
                   <option value="2019">2019</option>
                   <option value="2018">2018</option>
@@ -131,7 +133,8 @@ erificar correo"> </div>
             </div>
             <div class="form-group">
               <div class="form-check"> <input class="form-check-input" type="checkbox" id="form21" value="on"> <label class="form-check-label" for="form21"> I Agree with <a href="#">Term and Conditions</a> of the service </label> </div>
-            </div> <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+            <button type="submit" class="btn btn-primary" href="address_register.html">Registrarse</button>
           </form>
         </div>
       </div>
