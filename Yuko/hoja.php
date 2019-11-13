@@ -15,6 +15,25 @@ $dia = $_POST['Dia'];
 $mes = $_POST['Mes'];
 $year = $_POST['Year'];
 
+if($nombre == "" or $apellidos == "" or $correo == "" or $password == ""){
+    echo '<script type="text/javascript">
+    alert("Todos los campos deben estar llenos");
+    window.location.href="sing_in.html";
+    </script>';
+}
+
+if($dia == 'Dia'){
+    echo '<script type="text/javascript">
+    alert("Todos los campos deben estar llenos");
+    window.location.href="sing_in.html";
+    </script>';
+}elseif($year == 'Año'){
+    echo '<script type="text/javascript">
+    alert("Todos los campos deben estar llenos");
+    window.location.href="sing_in.html";
+    </script>';
+}
+
 if($mes == 'Enero'){
     $g = '01';
 }elseif ($mes == 'Febrero'){
@@ -39,14 +58,21 @@ if($mes == 'Enero'){
     $g = '11';
 }elseif ($mes == 'Diciembre'){
     $g = '12';
+}else{
+    echo '<script type="text/javascript">
+    alert("Todos los campos deben estar llenos");
+    window.location.href="sing_in.html";
+    </script>';
 }
 
 $fecha = $year.'-'.$g.'-'.$dia;
 
 
-$consulta = "CALL IO_K_C('$nombre','$apellidos','$correo','$password','$fecha');";
+
+$consulta = "CALL IO_K_C('$nombre','$apellidos','$correo',AES_ENCRYPT('$password','gato'),'$fecha');";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta verificala");
-echo $nombre;
+
+header("Location:address_register.html");
 
 mysqli_close( $conexion );
 ?>  

@@ -43,7 +43,15 @@
             <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="Verificar correo"> </div>
             <div class="form-row">
               <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19" name="Password"> </div>
-              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" name="Password"> </div>
+              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" name="Password"></div>
+              <script> var p1 = document.getElementById('form19').value;
+                var p2 = document.getElementById('form20').value;
+                function validacion(){
+              		if(p2 != p1){
+                	alert("Las contraseñas deben ser exactamente iguales");
+                  }
+                }
+              </script>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6"> <label for="form19">Fecha de nacimiento</label><br><br>
@@ -133,7 +141,7 @@
             <div class="form-group">
               <div class="form-check"> <input class="form-check-input" type="checkbox" id="form21" value="on"> <label class="form-check-label" for="form21"> I Agree with <a href="#">Term and Conditions</a> of the service </label> </div>
             </div>
-            <button type="submit" class="btn btn-primary" href="address_register.html">Registrarse</button>
+            <button type="submit" class="btn btn-primary" function="validacion()" href="address_register.html">Registrarse</button>
           </form>
         </div>
       </div>
