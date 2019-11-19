@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
 
 <head>
@@ -10,7 +10,7 @@
   <link rel="icon" href="img/slider/bce0e1de5736cedd781eab1b401a27e1.gif">
 </head>
 
-<body style="">
+<body>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
         <span class="navbar-toggler-icon"></span>
@@ -28,10 +28,10 @@
       </div>
     </div>
   </nav>
-  <div class="py-5 text-center" style="">
+  <div class="py-5 text-center" style="	background-image: url(img/main_img/296087.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
     <div class="container">
       <div class="row">
-        <div class="mx-auto col-lg-6 col-10" style="	background-image: linear-gradient(to bottom, rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+        <div class="mx-auto col-lg-6 col-10" style="background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8)); background-position: left top; background-size: 100%; background-repeat: repeat;">
           <h1 contenteditable="true">Crear cuenta nueva</h1>
           <form class="text-left" action="hoja.php" method="POST">
             <div class="form-group">
@@ -39,109 +39,46 @@
                 <div class="form-group"><label></label><input type="text" class="form-control" id="form16" placeholder="Apellidos" name="Apellidos"></div>
               </div>
             </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form17" placeholder="Correo" name="Correo"> </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="Verificar correo"> </div>
+            <div class="form-group"> <input type="email" class="form-control" id="form17" placeholder="Correo" name="Correo" required> </div>
+            <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="Verificar correo" name="Vericor" required> </div>
             <div class="form-row">
-              <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19" name="Password"> </div>
-              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" name="Password"></div>
-              <script> var p1 = document.getElementById('form19').value;
-                var p2 = document.getElementById('form20').value;
+              <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19" name="Password" required> </div>
+              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" name="Password" required></div>
+              
+              <script> 
+               
+                var p1 = document.getElementById('form19');
+                var p2 = document.getElementById('form20');
+                var c1 = document.getElementById('form17');
+                var c2 = document.getElementById('form18');
+               
                 function validacion(){
-              		if(p2 != p1){
-                	alert("Las contraseñas deben ser exactamente iguales");
+                  if(p1.value != p2.value){
+                    p1.value=''
+                    p2.value=''
+                    p1.value.focus();
+                    alert("Las contraseñas no coinciden");
+                  }
+                  if(c1.value != c2.value){
+                    c1.value=''
+                    p2.value=''
+                    p1.value.focus();
+                    alert('Los correos electronicos no coinciden');
                   }
                 }
+              
               </script>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6"> <label for="form19">Fecha de nacimiento</label><br><br>
-                <select name="Dia">
-                  <option value="Dia">Dia</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
-                </select>   <select name="Mes">
-                  <option value="Mes">Mes</option>
-                  <option value="Enero">Enero</option>
-                  <option value="Febrero">Febrero</option>
-                  <option value="Marzo">Marzo</option>
-                  <option value="Abril">Abril</option>
-                  <option value="Mayo">Mayo</option>
-                  <option value="Junio">Junio</option>
-                  <option value="Julio">Julio</option>
-                  <option value="Agosto">Agosto</option>
-                  <option value="Septiembre">Septiembre</option>
-                  <option value="Octubre">Octubre</option>
-                  <option value="Noviembre">Noviembre</option>
-                  <option value="Diciembre">Diciembre</option>
-                </select>  <select name="Year">
-                  <option value="Año">Año</option>
-                  <option value="2019">2019</option>
-                  <option value="2018">2018</option>
-                  <option value="2017">2017</option>
-                  <option value="2016">2016</option>
-                  <option value="2015">2015</option>
-                  <option value="2014">2014</option>
-                  <option value="2013">2013</option>
-                  <option value="2012">2012</option>
-                  <option value="2011">2011</option>
-                  <option value="2010">2010</option>
-                  <option value="2009">2009</option>
-                  <option value="2008">2008</option>
-                  <option value="2007">2007</option>
-                  <option value="2006">2006</option>
-                  <option value="2005">2005</option>
-                  <option value="2004">2004</option>
-                  <option value="2003">2003</option>
-                  <option value="2002">2002</option>
-                  <option value="2001">2001</option>
-                  <option value="2000">2000</option>
-                  <option value="1999">1999</option>
-                  <option value="1998">1998</option>
-                  <option value="1997">1997</option>
-                  <option value="1996">1996</option>
-                  <option value="1995">1995</option>
-                  <option value="1994">1994</option>
-                  <option value="1993">1993</option>
-                  <option value="1992">1992</option>
-                  <option value="1991">1991</option>
-                  <option value="1990">1990</option>
-                  <option value="1989">1989</option>
-                </select>
+                <input type="date" name="Fecha"></input>
+              </div>
               </div>
             </div>
             <div class="form-group">
               <div class="form-check"> <input class="form-check-input" type="checkbox" id="form21" value="on"> <label class="form-check-label" for="form21"> I Agree with <a href="#">Term and Conditions</a> of the service </label> </div>
             </div>
-            <button type="submit" class="btn btn-primary" function="validacion()" href="address_register.html">Registrarse</button>
+            <input type="submit" class="btn btn-primary" onclick="validacion()">Registrarse</button>
           </form>
         </div>
       </div>
@@ -150,7 +87,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
