@@ -1,6 +1,6 @@
 <?php
 $usuario = "root";
-$contrasena = "utec";
+$contrasena = "";
 $servidor = "localhost:3306";
 $basededatos = "COSECHANDO";
 
@@ -11,42 +11,7 @@ $nombre = $_POST['Nombre'];
 $apellidos = $_POST['Apellidos'];
 $correo = $_POST['Correo'];
 $password = $_POST['Password'];
-$dia = $_POST['Dia'];
-$mes = $_POST['Mes'];
-$year = $_POST['Year'];
-
-if($mes == 'Enero'){
-    $g = '01';
-}elseif ($mes == 'Febrero'){
-    $g = '02';
-}elseif ($mes == 'Marzo'){
-    $g = '03';
-}elseif ($mes == 'Abril'){
-    $g = '04';
-}elseif ($mes == 'Mayo'){
-    $g = '05';
-}elseif ($mes == 'Junio'){
-    $g = '06';
-}elseif ($mes == 'Julio'){
-    $g = '07';
-}elseif ($mes == 'Agosto'){
-    $g = '08';
-}elseif ($mes == 'Septiembre'){
-    $g = '09';
-}elseif ($mes == 'Octubre'){
-    $g = '10';
-}elseif ($mes == 'Noviembre'){
-    $g = '11';
-}elseif ($mes == 'Diciembre'){
-    $g = '12';
-}else{
-    echo '<script type="text/javascript">
-    alert("Todos los campos deben estar llenos");
-    window.location.href="sing_in.html";
-    </script>';
-}
-
-$fecha = $year.'-'.$g.'-'.$dia;
+$fecha = $_POST['Fecha'];
 
 
 $consulta = "CALL Creacion_id_usuario('$nombre','$apellidos','$correo',AES_ENCRYPT('$password','gato'),'$fecha');";
@@ -60,3 +25,4 @@ header("Location:address_register.html");
 
 mysqli_close( $conexion );
 ?>  
+

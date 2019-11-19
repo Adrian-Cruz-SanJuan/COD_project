@@ -22,7 +22,7 @@
                 var latitude = posicion.coords.latitude;
                 var longitude = posicion.coords.longitude;
                 var coordenadas = latitude.toString()+longitude.toString();
-                output.innerHTML ="<p>Latitud: "+latitude+"<br>Longitud: "+longitude+"</p>";
+                //output.innerHTML ="<p>Latitud: "+latitude+"<br>Longitud: "+longitude+"</p>";
                 document.getElementById("lol").value=coordenadas;
             }
 

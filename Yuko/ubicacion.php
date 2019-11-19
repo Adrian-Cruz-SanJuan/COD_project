@@ -14,7 +14,7 @@
     $consulta = "CALL Creacion_id_terreno('$coordenadas','$tama','$usuario');";
     $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta verificala yuko");
 
-    header("Location:main_user.html");
+    header("Location:log_in.html");
 
     mysqli_close( $conexion );
 ?>

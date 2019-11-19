@@ -1,0 +1,92 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <title>Crear cuenta</title>
+  <link rel="icon" href="img/slider/bce0e1de5736cedd781eab1b401a27e1.gif">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar18"> <a class="navbar-brand d-none d-md-block" href="index.html">
+          <i class="fa d-inline fa-lg fa-leaf"></i>
+          <b> Cosechando ando<br></b>
+        </a>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"> <a class="nav-link text-white" href="#"><br></a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5 text-center" style="	background-image: url(img/main_img/296087.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-6 col-10" style="background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8)); background-position: left top; background-size: 100%; background-repeat: repeat;">
+          <h1 contenteditable="true">Crear cuenta nueva</h1>
+          <form class="text-left" action="hoja.php" method="POST">
+            <div class="form-group">
+              <div class="form-group"><input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre">
+                <div class="form-group"><label></label><input type="text" class="form-control" id="form16" placeholder="Apellidos" name="Apellidos"></div>
+              </div>
+            </div>
+            <div class="form-group"> <input type="email" class="form-control" id="form17" placeholder="Correo" name="Correo" required> </div>
+            <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="Verificar correo" name="Vericor" required> </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19" name="Password" required> </div>
+              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" name="Password" required></div>
+              
+              <script> 
+               
+                var p1 = document.getElementById('form19');
+                var p2 = document.getElementById('form20');
+                var c1 = document.getElementById('form17');
+                var c2 = document.getElementById('form18');
+               
+                function validacion(){
+                  if(p1.value != p2.value){
+                    p1.value=''
+                    p2.value=''
+                    p1.value.focus();
+                    alert("Las contraseñas no coinciden");
+                  }
+                  if(c1.value != c2.value){
+                    c1.value=''
+                    p2.value=''
+                    p1.value.focus();
+                    alert('Los correos electronicos no coinciden');
+                  }
+                }
+              
+              </script>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"> <label for="form19">Fecha de nacimiento</label><br><br>
+                <input type="date" name="Fecha"></input>
+              </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check"> <input class="form-check-input" type="checkbox" id="form21" value="on"> <label class="form-check-label" for="form21"> I Agree with <a href="#">Term and Conditions</a> of the service </label> </div>
+            </div>
+            <input type="submit" class="btn btn-primary" onclick="validacion()">Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
