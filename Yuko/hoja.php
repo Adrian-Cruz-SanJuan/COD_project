@@ -14,7 +14,7 @@ $password = $_POST['Password'];
 $fecha = $_POST['Fecha'];
 
 
-$consulta = "CALL Creacion_id_usuario('$nombre','$apellidos','$correo',AES_ENCRYPT('$password','gato'),'$fecha');";
+$consulta = "CALL Creacion_id_usuario('$nombre','$apellidos','$correo','$password','$fecha');";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta verificala2");
 
 /*$consulta_id = "SELECT USUARIO_ID FROM USUARIO WHERE CORREO_U = '$correo' AND PASSWORD_U = '$password';";
