@@ -13,6 +13,8 @@ if ($filas > 0) {
     header('location:main_user.html');
 }
 else {
-    echo 'Fallo en la autenticación';
+    echo '<script type="text/javascript">alert("Porfavor verifica tus datos");
+    window.location.href="log_in.html";</script>';
+    header('location:log_in.html');
 }
 mysqli_close($conexion);
