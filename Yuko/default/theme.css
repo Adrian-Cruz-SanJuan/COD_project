@@ -4688,7 +4688,8 @@ a.close.disabled {
   color: #333; }
 
 .carousel {
-  position: relative; }
+  position: relative;
+  height: fit-content; }
 
 .carousel.pointer-event {
   -ms-touch-action: pan-y;
