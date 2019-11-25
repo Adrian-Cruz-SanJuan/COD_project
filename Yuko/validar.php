@@ -17,7 +17,13 @@ $resultado=mysqli_query($conexion, $consulta);
 //validacion
 $filas=mysqli_num_rows($resultado);
 if ($filas > 0) {
-    header('location:main_user.html');
+    //Obtener el id 
+    $indice = $resultado->fetch_row();
+    $id_usuario = $indice[0];
+    //Iniciar la sesión
+    session_start();
+    $_SESSION['usuario'] = $id_usuario;
+    header('location:session_begin.php');
 }
 else {
     header('location:log_in.html');

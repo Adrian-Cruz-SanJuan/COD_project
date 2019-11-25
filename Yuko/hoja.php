@@ -18,8 +18,13 @@ $fecha = $_POST['Fecha'];
 $consulta = "CALL Creacion_id_usuario('$nombre','$apellidos','$correo',MD5('$password'),'$fecha');";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta verificala2");
 
+if(true){
+    //Iniciar la sesión
+    session_start();
+    $_SESSION['registro'] = $correo;
+    header("Location:address_register.html");
+}
 
-header("Location:address_register.html");
 
 mysqli_close( $conexion );
 ?>  
