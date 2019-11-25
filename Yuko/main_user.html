@@ -6,10 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="default/theme.css" type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <script type="text/javascript">
+    <?php include "connection.php"; 
+    			$nombre_usuario; 
+    	?>
+
+    function name() {
+      var nombre_usuario = '<?php echo $nombre_usuario; ?>';
+      document.getElementById('nombre_usuario').value = nombre_usuario;
+    }
+  </script>
 </head>
 
 <body background="img/main_img/mujer-bonita.jpg">
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary" onload="name()">
     <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,8 +32,7 @@
           <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item"> <a class="nav-link" href="profile.html">
-              <!--?php echo $indice[0] ?--> </a> </li>
+          <li class="nav-item"> <a class="nav-link" href="profile.html" id="nombre_usuario"> </a> </li>
           <!--<li class="nav-item"> <a class="nav-link text-white" href="sing_in.html">Crear una cuenta<br></a> </li> -->
         </ul>
       </div>
