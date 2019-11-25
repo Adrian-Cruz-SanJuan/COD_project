@@ -17,15 +17,12 @@ $resultado=mysqli_query($conexion, $consulta);
 //validacion
 $filas=mysqli_num_rows($resultado);
 if ($filas > 0) {
+    //Obtener el id 
+    $indice = $resultado->fetch_row();
+    $id_usuario = $indice[0];
     //Iniciar la sesión
     session_start();
-    $_SESSION['usuario'] = true;
-    $_SESSION['correo'] = $correo;
-    $_SESSION['inicio'] = time();
-    $_SESSION['termino'] = $_SESSION['comienzo'] + (60 * 60);
-    //Obtener el id 
-    $row = mysqli_fetch_row($resultado);
-    $_SESSION['id'] = $row['USUARIO_ID'];
+    $_SESSION['usuario'] = $id_usuario;
     header('location:session_begin.php');
 }
 else {
