@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="default/theme.css" type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-  <link rel="icon" href="C:/Users/81605/Desktop/Pingendo/Yuko/img/slider/bce0e1de5736cedd781eab1b401a27e1.gif">
+  <link rel="icon" href="images/icons/024-plant.png">
 </head>
 
-<body>
+<body style="	background-image: url(images/main_img/253659.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
         <span class="navbar-toggler-icon"></span>
@@ -22,22 +22,25 @@
           <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item"> <a class="nav-link text-white" href="#"><br></a> </li>
+          <li class="znav-item"> <a class="nav-link text-white" href="#"><br></a> </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="py-5" style="	background-image: url(img/main_img/253659.jpg);	background-position: left center;	background-size: cover;	background-repeat: repeat;">
+  <div class="py-5">
     <div class="container">
       <div class="row">
-        <div class="p-5 col-lg-6">
+          <div id="tres" class="mx-auto col-lg-6 col-10" style="background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8)); background-position: left top; background-size: 100%; background-repeat: repeat; border-radius: 25px;">
           <h1 class="text-light">I am so happy, my dear</h1>
           <p class="mb-3 text-light">So absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
-          <form action='validar.php' method="post">
+          <form action="php/validar.php" method="post">
             <div class="form-group"> <input type="email" class="form-control" placeholder="Enter email" id="form11" name="correo"> </div>
-            <div class="form-group"> <input type="password" class="form-control" placeholder="Password" id="form12" name="contra"> <small class="form-text text-muted text-right">
+            <div class="form-group"> <input type="password" class="form-control" placeholder="Password" id="form12" name="contra"><br>
+            <button type="submit" class="btn btn-primary" id="cuatro" style="position: relative; left: 12%; width: 400px;">Submit</button>
+              <small class="form-text text-muted text-right">
                 <a href="#"> Forgot your password?</a>
-              </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
+              </small>
+            </div>
           </form>
         </div>
       </div>
