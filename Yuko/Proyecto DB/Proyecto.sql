@@ -240,3 +240,5 @@ CREATE PROCEDURE Creacion_id_usuario(
 DELIMITER ;
 
 SELECT * FROM USUARIO;
+
+select database();
