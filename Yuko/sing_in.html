@@ -22,7 +22,8 @@
         <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar18"> <a class="navbar-brand d-none d-md-block" href="index.html"></a>
+        <div class="collapse navbar-collapse" id="navbar18">
+          <a class="navbar-brand d-none d-md-block" href="index.html"></a>
           <ul class="navbar-nav mx-auto">
             <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
           </ul>
@@ -30,6 +31,7 @@
       </div>
     </nav>
 <br><br>
+
 <!-- formulario -->
     <div class="container">
       <div class="row">
@@ -37,15 +39,28 @@
           <h1 contenteditable="true">Crear cuenta nueva</h1>
           <form class="text-left" action="php/hoja.php" method="POST">
             <div class="form-group">
-              <div class="form-group"><input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre" required="">
-                <div class="form-group"><label></label><input type="text" class="form-control" id="form16" placeholder="Apellidos" name="Apellidos" required=""></div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre" required="">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="form16" placeholder="Apellidos" name="Apellidos" required="">
+                </div>
               </div>
             </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form17" placeholder="Correo" name="Correo" required=""> </div>
-            <div class="form-group"> <input type="email" class="form-control" id="form18" placeholder="Verificar correo" name="Vericor" required=""> </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="form17" placeholder="Correo" name="Correo" required="">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="form18" placeholder="Verificar correo" name="Vericor" required="">
+            </div>
             <div class="form-row">
-              <div class="form-group col-md-6"> <label for="form19">Contraseña</label> <input type="password" class="form-control" id="form19" name="Password" required=""> </div>
-              <div class="form-group col-md-6"> <label for="form20">Confirmar contraseña</label> <input type="password" class="form-control" id="form20" name="Password" required=""></div>
+              <div class="form-group col-md-6">
+                <label for="form19">Contraseña</label>
+                <input type="password" class="form-control" id="form19" name="Password" required="">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="form20">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="form20" name="Password" required="">
+              </div>
               
               <!-- verificacion -->
               <script>
