@@ -4,106 +4,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="default/theme.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v3"></script>
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <title>Cosechando por tu futuro</title>
+  <link rel="icon" href="images/icons/024-plant.png">
 </head>
 
-<body>
-  <!-- Barra de navegacion #TODO mover marcador -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
+<body style="	background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(images/main_img/253658.jpg);	background-position: center center, center center;	background-size: cover, cover;	background-repeat: no-repeat; background-attachment: fixed;">
+
+<!-- Barra de navegación -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container" >
+      <div class="navbar-brand">
+        <img src="images/icons/024-plant.png" width="30" height="30">
+        <a class="text-ceter" href="index.html"><b style="color: white;">Cosechando por tu futuro</b></a>
+       </div> 
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbar18"> <a class="navbar-brand d-none d-md-block" href="index.html">
-          <i class="fa d-inline fa-lg fa-leaf"></i>
-          <b> Cosechando ando<br></b>
-        </a>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="about.html">Acerca de nosotros</a> </li>
+            <li class="nav-item"> <a class="nav-link text-white" href="log_in.html">Iniciar sesión</a> </li>
+            <li class="nav-item"> <a class="nav-link text-white" href="sing_in.html">Crear una cuenta<br></a> </li>
+          </ul>
       </div>
     </div>
   </nav>
 
 
-  <div class="py-5 text-center align-items-center d-flex" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-md-8 mx-auto"> <img src="img/icons/024-plant.png" style="width: 80px; height: 80px;">
-          <h1 class="display-3 mb-4">Registro de terreno</h1>
-          <p class="lead mb-5">Deseas marcar tu domicilio con...</p> <a class="btn btn-lg mx-1 btn-outline-dark" href="#" id="yuko" onclick="findMe()">Ubicacion actual</a> <a href="#" class="btn btn-lg btn-primary mx-1" onclick="findMe()">Marcador en el mapa<br></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-5 text-center" style="	background-image: url(img/main_img/galaxy_s5_2-wallpaper-2560x1440.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
-    <div class="container">
-      <div id="mapa" style="	width: 1100px;	height: 600px;">
-      </div>
-      <br>
-      <form action="php/ubicacion.php" method="POST">
-        <input type="text" id="coords" name='lol'>
-        <button type="submit">Presione para continuar</button>
-    </form>
 
-      <script type="text/javascript">
-         function findMe() {
-          navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
-          function fn_mal() {}
-          function fn_ok(rta) {
-             var lat = rta.coords.latitude;
-             var lon = rta.coords.longitude;
-          var latlng = new google.maps.LatLng(lat, lon);
-          var map = new google.maps.Map(document.getElementById('mapa'), {
-              center: latlng,
-              zoom: 17,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-          });
-          var marker = new google.maps.Marker({
-              position: latlng,
-              map: map,
-              title: 'Set lat/lon values for this property',
-              draggable: true
-          });
-          document.getElementById("coords").value=latlng;
-          google.maps.event.addListener(marker, 'dragend', function(a) {
-              console.log(a);
-              var div = document.createElement('div');
-              div.innerHTML = a.latLng.lat().toFixed(4) + ', ' + a.latLng.lng().toFixed(4);
-              document.getElementsByTagName('body')[0].appendChild(div);
-          });}
-           /*var divMapa = document.getElementById('mapa');
-           navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
+      <div class="container py-5">
+        <div class="row">
+            <div class="py-1 text-center text-white h-100 align-items-center d-flex" ></div>
+          <div class="col-md-0 mx-auto">
+            <h1 id="uno" class="display-2 mb-3">Registro de terreno</h1>
 
-           function fn_mal() {}
 
-           function fn_ok(rta) {
-             var lat = rta.coords.latitude;
-             var lon = rta.coords.longitude;
-             var coordenadas = lat.toString()+lon.toString();
-            document.getElementById("coords").value=coordenadas;
-             var gLatLon = new google.maps.LatLng(lat, lon);
-             var objConfig = {
-               zoom: 17,
-               center: gLatLon              
-             }
-             var gMapa = new google.maps.Map(divMapa, objConfig);
-             var objConfigMarker = {
-               position: gLatLon,
-               map: gMapa,
-               title: "Usted está aca"
-               ,draggable: true
-             }
-             var gMArker = new google.maps.Marker(objConfigMarker);
-           }
-            google.maps.event.addListener(marker,'dragend',function(event) {
-            document.getElementById("coords").value = this.getPosition().toString();
-              });*/
-         }
-        </script>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Mapa de GoogleMaps -->
+
+<div id="map"></div>
+<input type="hidden" id="coords" /><br>
+<input type="button"/>
+<script type="text/javascript" src="js/maps.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+</div>
+</div>
+</div>
+</div>
+
 </body>
-
 </html>
