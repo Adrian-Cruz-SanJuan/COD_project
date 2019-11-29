@@ -1,9 +1,16 @@
 <?php
-$usuario = "root";
-$contrasena = "utec"; //contraseña de Yuko
-//$contasena = ""; //Contraseña universal :v
-$servidor = "localhost:3306";
-$basededatos = "COSECHANDO";
+//Conexion a la base de datos en el servidor
+// $usuario = "id11774952_root";
+// $contrasena = "tacosde.canasta";
+// $servidor = "localhost";
+// $basededatos = "id11774952_cosechando";
+
+//Conexion a la base de datos
+// $usuario = "root";
+// $contrasena = "utec"; //contraseña de Yuko
+// //$contasena = ""; //Contraseña universal :v
+// $servidor = "localhost:3306";
+// $basededatos = "COSECHANDO";
 
 $conexion = mysqli_connect( $servidor, $usuario,$contrasena) or die ("No se ha podido conectar al servidor de Base de datos");
 $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues siempre no quizo conectar a la base de datos" );
