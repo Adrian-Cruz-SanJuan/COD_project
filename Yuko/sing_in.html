@@ -10,7 +10,7 @@
   <link rel="icon" href="images/icons/024-plant.png">
 </head>
 
-<body style="	background-image: url(images/main_img/bonsai.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat; object-fit: cover;">
+<body style="	background-image: url(images/main_img/bonsai.jpg);	background-position: top left;	background-size: 100%;	background-repeat: no-xrepeat; object-fit: cover;">
 
   <!-- Barra de navegacion -->
   <nav class="navbar navbar-dark bg-dark">
@@ -35,13 +35,13 @@
 <!-- formulario -->
     <div class="container">
       <div class="row">
-        <div class="mx-auto col-lg-6 col-10" style="background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8)); background-position: left top; background-size: 100%; background-repeat: repeat; border-radius: 25px;">
+        <div class="mx-auto col-lg-6 col-10" style="background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8)); background-position: left top; background-size: 100%; background-repeat: no-repeat; border-radius: 25px; background-attachment: fixed;">
           <h1 contenteditable="true">Crear cuenta nueva</h1>
           <form class="text-left" action="php/hoja.php" method="POST">
             <div class="form-group">
               <div class="form-group">
-                <input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre" required="">
                 <div class="form-group">
+                  <input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre" required=""><br>
                   <input type="text" class="form-control" id="form16" placeholder="Apellidos" name="Apellidos" required="">
                 </div>
               </div>
