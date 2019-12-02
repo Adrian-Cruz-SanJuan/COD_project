@@ -9,11 +9,11 @@ $contra=$_POST['contra'];
 // $basededatos = "id11774952_cosechando";
 
 //conexion a la base de datos
-// $usuario = "root";
-// $contrasena = "utec"; //contraseña Yuko
+$usuario = "root";
+$contrasena = "utec"; //contraseña Yuko
 // //$contrasena = ""; //contraseña universal
-// $servidor = "localhost:3306";
-// $basededatos = "COSECHANDO";
+$servidor = "localhost:3306";
+$basededatos = "COSECHANDO";
 
 $conexion = mysqli_connect( $servidor, $usuario,$contrasena) or die ("No se ha podido conectar al servidor de Base de datos");
 $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues siempre no quizo conectar a la base de datos" );
