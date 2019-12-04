@@ -1,14 +1,16 @@
-<!-- #TODO estilos -->
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/theme.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/theme.css">
+  <title>Perfil</title>
   <link rel="icon" href="images/icons/024-plant.png">
-  <title>Cosechando por tu futuro</title>
+</head>
+
+
   <!-- #TODO mostrar nombre de usuario  -->
   <!-- <script type="text/javascript">
     <?php include "connection.php"; 
@@ -20,58 +22,63 @@
       document.getElementById('nombre_usuario').value = nombre_usuario;
     }
   </script> -->
-</head>
 
-<<<<<<< HEAD
-<body background="img/main_img/mujer-bonita.jpg">
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary" onload="name()">
-    <div class="container"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar18"> <a class="navbar-brand d-none d-md-block" href="main_user.html"><img src="images/icons/024-plant.png" width="25px" height="25px">
-          <b>Cosechando por tu futuro<br></b>
-        </a>
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"> <a class="nav-link" href="main_user.html">Inicio</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-        </ul>
-        <ul class="navbar-nav"></ul>
-      </div>
+
+
+<body style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 30, 0,0.75)), url(images/main_img/bonsai.jpg);	background-position: center center, center center;	background-size: cover, cover;	background-repeat: no-repeat; background-attachment: fixed;">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container" >
+    <div class="navbar-brand">
+      <img src="images/icons/024-plant.png" width="30" height="30">
+      <a class="text-ceter" href="index.html"><b style="color: white;">Cosechando por tu futuro</b></a>
+      </div> 
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar18">
+      <a class="navbar-brand d-none d-md-block" href="index.html"></a>
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="about.html">Acerca de nosotros</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="address_register.html">Registra tu terreno</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">En proceso</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Logros</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Cerrar sesión</a> </li>
+      </ul>
     </div>
-  </nav>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+  </div>
+</nav>
+<br><br>
+
+<div class="container">
+  <div class="row">
+
+    <!-- Información del perfil -->
+    <div class="col-md-3" id="infousr">
+      <img id="imusr" src="images/main_img/user.jpg" height="250px" width="250px"><br><br>
+      <img src="images/icons/progress/018-medal.png" alt="Logros" height="50px" width="50px">
+      <a href="progress.html" style="color: black;">Logros</a><br><br>
+      <img src="images/icons/progress/032-progress.png" alt="Progreso" height="50px" width="50px">
+      <a href="progress.html" style="color: black;"> Progreso</a><br><br>
+      <img src="images/icons/exit.png" alt="Cerrar Sesión" height="50px" width="50px">
+      <a href="php/log_out.php" style="color: black;">Cerrar Sesión</a><br><br>
+    </div>
+
+
+
+    <!--El muro-->
+    <div class="col-lg-9 p-md-5 p-3 flex-column justify-content-center" id="muro">
+      Aqui va toda la información que otros usuarios comparten, videos aleatoreos y eventos disponibles,
+      todos tus amigos van a poder ver este contenido.
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
 </body>
-=======
-<body>
 
-  <!-- Barra de Navegacion -->
-  <nav class="navbar navbar-dark bg-dark">
-      <div class="container" >
-        <div class="navbar-brand">
-          <img src="images/icons/024-plant.png" width="30" height="30">
-          <a class="text-ceter" href="index.html"><b style="color: white;">Cosechando por tu futuro</b></a>
-         </div> 
-        <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar18">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar18"> <a class="navbar-brand d-none d-md-block" href="index.html">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">Acerca de nosotros</a> </li>
-              <li class="nav-item"> <a class="nav-link text-white" href="log_in.html">Resgistra tu terreno</a> </li>
-              <li class="nav-item"> <a class="nav-link text-white" href="sing_in.html">En Proceso<br></a> </li>
-              <li class="nav-item"> <a class="nav-link text-white" href="sing_in.html">Logros<br></a> </li>
-              <li class="nav-item"> <a class="nav-link text-white" href="sing_in.html">Eventos<br></a> </li>
-            </ul>
-        </div>
-      </div>
-    </nav>
->>>>>>> e902866725d4e5e7aa6f4f25aef96facb7dcc993
-
-  <!-- Cuerpo -->
-  
-</html>
