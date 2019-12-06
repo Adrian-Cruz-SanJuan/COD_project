@@ -7641,13 +7641,24 @@ a.text-dark:hover, a.text-dark:focus {
 
   #imusr {
     border-radius: 50%;
+    height: auto;
+    width: 250px;
   }
 
   #infousr {
-    opacity: 85%;
     background-color: lightgrey;
+    height: 20%;
+    position: sticky;
+    top: 17%;
   }
 
   #muro {
     background-color: white;
+  }
+
+  @media screen and (max-width: 800px){
+    #infousr {
+      position: relative;
+      margin-bottom: 30px;
+    }
   }

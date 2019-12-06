@@ -7,7 +7,7 @@
 
 //Conexion a la base de datos
 $usuario = "root";
-$contrasena = "utec"; //contraseña de Yuko
+$contrasena = ""; //contraseña de Yuko
 // //$contasena = ""; //Contraseña universal :v
 $servidor = "localhost:3306";
 $basededatos = "COSECHANDO";

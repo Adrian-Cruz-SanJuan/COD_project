@@ -43,7 +43,7 @@
         <li class="nav-item"> <a class="nav-link" href="address_register.html">Registra tu terreno</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#">En proceso</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#">Logros</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" style="color: white;">Cerrar sesión</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="php/log_out.php" style="color: white;">Cerrar sesión</a> </li>
       </ul>
     </div>
   </div>
@@ -54,24 +54,64 @@
   <div class="row">
 
     <!-- Información del perfil -->
-    <div class="col-md-3" id="infousr">
-      <img id="imusr" src="images/main_img/user.jpg" height="250px" width="250px"><br><br>
+    <div class="col-md-3" id="infousr" style="margin-right: 1.5%; border-radius: 20px;">
+        <img id="imusr" class="img-fluid" src="images/main_img/user.jpg" style="margin-top: 7%;"><br><br>
+        <h3 style="margin-left: 50px;">Peter Parker</h3><br>
       <img src="images/icons/progress/018-medal.png" alt="Logros" height="50px" width="50px">
       <a href="progress.html" style="color: black;">Logros</a><br><br>
       <img src="images/icons/progress/032-progress.png" alt="Progreso" height="50px" width="50px">
       <a href="progress.html" style="color: black;"> Progreso</a><br><br>
-      <img src="images/icons/exit.png" alt="Cerrar Sesión" height="50px" width="50px">
+      <img src="images/icons/exit.png" alt="Cerrar Sesión" height="45px" width="45px">
       <a href="php/log_out.php" style="color: black;">Cerrar Sesión</a><br><br>
     </div>
 
 
 
     <!--El muro-->
-    <div class="col-lg-9 p-md-5 p-3 flex-column justify-content-center" id="muro">
-      Aqui va toda la información que otros usuarios comparten, videos aleatoreos y eventos disponibles,
-      todos tus amigos van a poder ver este contenido.
+<div class="col-lg-8 p-md-5 p-3 flex-column justify-content-center" id="muro" style="border-radius: 20px;">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-7" style="margin-top: 10%;">
+        <img src="images/mainuser/uno.jpg" class="img-fluid" height="250px" width="250px" style="border-radius: 20px;">
+      </div>
+      <div class="col-4">
+        <h5 class="mb-0 justify-content-center">Unete a nuestra primer campaña de reforestación</h5>
+        <p class="mb-0 justify-content-center" style="text-align: justify;">Estamos buscando gente que se una a nuestra primer campaña de reforestación, una vez alcanzada la meta 
+          de personas, se establecerá el lugar y la fecha. ¡Esperamos contar con tu participación! todo nuestro equipo te espera
+        </p>
+      </div>
     </div>
-  </div>
+  </div><br><br><hr>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-7" style="margin-top: 10%;">
+          <img src="images/mainuser/dos.jpg" class="img-fluid" height="250px" width="250px" style="border-radius: 20px;">
+        </div>
+        <div class="col-4">
+          <h5 class="mb-0 justify-content-center">Hidalgo siembra contigo</h5>
+          <p class="mb-0 justify-content-center" style="text-align: justify;">El pasado mes de Junio se llevo a cabo la campaña de reforestación Hidalgo siembre contigo
+            en la capital del estado de Hidalgo donde decenas de familias acudieron para ayudar a sembrar árboles.
+          </p>
+        </div>
+      </div>
+    </div><br><br><hr>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-7" style="margin-top: 10%;">
+              <video src="video/Cosecha Time Lapse  (Diego Bolinger ) GoPro.mp4" height="250px" width="250px" class="embed-responsive-item" controls="controls"> Your browser does not support HTML5 video. </video>
+          </div>
+          <div class="col-4" style="margin-top: 15%;">
+            <h5 class="mb-0 justify-content-center">¡Hora de cosechar!</h5>
+            <p class="mb-0 justify-content-center" style="text-align: justify;">Ya se acerca la época de las cosehas, y tú ¿Estás listo para cosechar?
+              recuerda que despues de realizada la cosecha, se tiene que tratar el suelo para volver a sembrar
+            </p>
+          </div>
+        </div>
+      </div><br><br><hr>
+
 </div>
 
 
