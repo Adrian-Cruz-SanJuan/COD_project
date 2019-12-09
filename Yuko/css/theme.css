@@ -7653,7 +7653,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 
   #muro {
-    background-color: white;
+    background-color: lightgray;
   }
 
   @media screen and (max-width: 800px){
