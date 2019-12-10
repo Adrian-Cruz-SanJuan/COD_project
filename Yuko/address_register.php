@@ -11,7 +11,7 @@
 </head>
 
 <body style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(images/main_img/253658.jpg);	background-position: center center, center center;	background-size: cover, cover;	background-repeat: no-repeat; background-attachment: fixed;">
-
+  
 <!-- Barra de navegación -->
   <nav class="navbar navbar-dark bg-dark">
     <div class="container" >
@@ -47,7 +47,7 @@
 
 <div id="map"></div>
 <form action="php/ubicacion.php" method="post">
-  <input type="hidden" id="coords" name="coords">
+  <input type="text" id="coords" name="coords">
   <input type="submit" class="btn btn-lg btn-primary mx-1" value="Registrar Terreno" id="BR"/>
 </form>
 
@@ -61,6 +61,15 @@
 </div>
 </div>
 </div>
+
+<?php
+  session_start();
+  $varsession = $_SESSION['registro'];
+
+  if($varsession == null || $varsession = ''){
+      header('location:php/session_begin.php');
+  }
+  ?>
 
 </body>
 </html>

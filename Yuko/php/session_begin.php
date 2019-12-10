@@ -7,6 +7,6 @@
         die();
     }
     //echo $_SESSION['usuario'];
-    header('location:../main_user.html')
+    header('location:../main_user.php')
 
 ?>

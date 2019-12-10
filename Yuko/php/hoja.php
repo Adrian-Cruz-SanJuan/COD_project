@@ -7,7 +7,7 @@
 
 //Conexion a la base de datos
 $usuario = "root";
-$contrasena = ""; //contraseña de Yuko
+$contrasena = "utec"; //contraseña de Yuko
 // //$contasena = ""; //Contraseña universal :v
 $servidor = "localhost:3306";
 $basededatos = "COSECHANDO";
@@ -34,7 +34,7 @@ if(true){
     //Iniciar la sesión
     session_start();
     $_SESSION['registro'] = $correo;
-    header("Location:../address_register.html");
+    header("Location:../address_register.php");
 }
 
 
