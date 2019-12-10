@@ -14,7 +14,7 @@
 
 
 
-<body style="background-image: url(images/main_img/bonsai.jpg);	background-position: top left;	background-size: 100%;	background-repeat: no-xrepeat; object-fit: cover;">
+<body style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(images/main_img/bonsai.jpg);	background-position: center center, center center;	background-size: cover, cover;	background-repeat: repeat, repeat;">
 
 <!-- Barra de navegación -->
     <nav class="navbar navbar-dark bg-dark">
@@ -42,12 +42,11 @@
 <div class="container">
     <div class="row">
         <div class="mx-auto col-lg-6 col-10" style="background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.8)); background-position: left top; background-size: 100%; background-repeat: no-repeat; border-radius: 25px; background-attachment: fixed;">
-            <h1 contenteditable="true">Nuevo registro</h1>
-            <form class="text-left" action="php/hoja.php" method="POST">
+            <h1 style="color: white;">Nuevo registro</h1>
+            <form class="text-left" action="php/panel-control.php" method="POST">
             <div class="form-group">
             <div class="form-group">
             <div class="form-group">
-            <input type="text" class="form-control" id="form16" placeholder="ID" name="ID de la planta" required=""><br>
             <input type="text" class="form-control" id="form16" placeholder="Nombre" name="Nombre" required="">
         </div>
         </div>
