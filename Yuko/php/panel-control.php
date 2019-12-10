@@ -2,7 +2,7 @@
 
 //Conexion a la base de datos
 $usuario = "root";
-$contrasena = "";
+$contrasena = "utec";
 $servidor = "localhost:3306";
 $basededatos = "COSECHANDO";
 
@@ -11,12 +11,12 @@ $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues siempre n
 
 // Obtención de datos
 $Nombre = $_POST["Nombre"];
-$Tamaño = $_POST["Tamaño"];
+$Tamano = $_POST["Tamaño"];
 $Tipo = $_POST["Tipo"];
 $Descripcion = $_POST["Descripcion"];
 
 // INSERT a la BDD
-$insertar = "INSERT INTO PLANTA (NOMBRE_P, TAMANO_P,TIPO, DESCRIPCION_P) VALUES ('$Nombre', '$Tamaño', '$Tipo', '$Descripcion');";
+$insertar = "CALL Creacion_id_planta('$Nombre', '$Tamano', '$Tipo', '$Descripcion');";
 
 // Ejecución del INSERT
 $Resultado = mysqli_query($conexion, $insertar);
