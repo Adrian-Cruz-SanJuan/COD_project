@@ -11,7 +11,7 @@ $contra=$_POST['contra'];
 //conexion a la base de datos
 $usuario = "root";
 //$contrasena = "utec"; //contraseña Yuko
-$contrasena = "utec"; //contraseña universal
+$contrasena = ""; //contraseña universal
 $servidor = "localhost:3306";
 $basededatos = "COSECHANDO";
 

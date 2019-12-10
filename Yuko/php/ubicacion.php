@@ -18,7 +18,7 @@
 
     // Conexion a la base de datos
     $usuario = "root";
-    $contrasena = "utec";
+    $contrasena = "";
     $servidor = "localhost:3306";
     $basededatos = "COSECHANDO";
 
@@ -26,7 +26,7 @@
     $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues siempre no quizo conectar a la base de datos" );
     
     $consulta = "CALL Creacion_id_terreno('$coordenadas','$correo')";
-    $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta verificala yuko");
+    $resultado = mysqli_query( $conexion, $consulta ) or die ($conexion->error);
     
     header("Location:../log_in.html");
 

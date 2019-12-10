@@ -46,8 +46,9 @@
 <!-- Mapa de GoogleMaps -->
 
 <div id="map"></div>
-<form action="php/ubicacion.php" method="post">
-  <input type="text" id="coords" name="coords">
+<!-- #TODO Redirigir a una pagina -->
+<form action="andosol.html" method="post">
+  <input type="hidden" id="coords" name="coords">
   <input type="submit" class="btn btn-lg btn-primary mx-1" value="Registrar Terreno" id="BR"/>
 </form>
 
